@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>   <link rel="manifest" href="manifest.json">
+   <meta name="theme-color" content="#008000">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>John T-Shirts</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f2f2f2;
+      text-align: center;
+      padding: 20px;
+    }
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px gray;
+      margin: 10px;
+    }
+    img {
+      width: 200px;
+      border-radius: 8px;
+    }
+    button {
+      background-color: green;
+      color: white;
+      padding: 12px 20px;
+      border: Blue;
+      border-radius: 5px;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+    select, input {
+      padding: 8px;
+      font-size: 16px;
+      margin: 5px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Millenium creations</h1></h1>
+    <p>Timagulitsa mabuku osiyanasiyana a Pdf . komaso timapanga graphic design </p>
+    
+  <img src="Book.jpg" width="300" height="280" alt="Minha foto">
+    
+    <h2>5000  Kwa</h2>
+    
+    <p>Sankhani:</p>
+    <select id="color">
+
+    
+    <p>Angati?</p>
+    <input type="number" id="quantity" value="1" min="1">
+    
+    <br>
+    <button onclick="buyNow()">Gulani pa WhatsApp</button>
+    
+    <h3 id="total">5000 kwacha</h3>
+  </div>
+
+  <script>
+    // JavaScript: Imawerengera ndalama zokha
+    function updateTotal() {
+      let price = 5000 kwacha;
+      let qty = document.getElementById('quantity').value;
+      let total = price * qty;
+      document.getElementById('total').innerText = 'Total: ' + total + ' kwacha';
+    }
+    
+    document.getElementById('quantity').addEventListener('input', updateTotal);
+    
+    // JavaScript: Itumiza oda pa WhatsApp
+    function buyNow() {
+      let color = document.getElementById('color').value;
+      let size = document.getElementById('size').value;
+      let qty = document.getElementById('quantity').value;
+      let total = 5000 * qty;
+      
+      let message = `Vincent! Ndikufuna kugula book . %0A%0AMtundu: ${color} %0ASize: ${size} %0AZingati: ${qty} %0ATotal: ${total} kwacha`;
+      
+      // Ikani nambala yako ya WhatsApp apa
+      let phone = '258860661014'; 
+      let url = `https://wa.me/${phone}?text=${message}`;
+      
+      window.open(url);
+    }
+  </script>
+
+</body>
+</html>
